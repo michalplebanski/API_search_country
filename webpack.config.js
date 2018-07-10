@@ -1,8 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-	entry: "./src/index.js",
+	entry: ["./src/index.js", "./src/main.scss"],
 	output: {
 		path: path.resolve(__dirname, "build"),
 		filename: "app.bundle.js"
@@ -14,17 +15,13 @@ module.exports = {
 				loader: "babel-loader"
 			},
 			{
-				test: /\.css$/,
-				use: [
-					{ loader: "style-loader" },
-					{
-						loader: "css-loader",
-						options: {
-							modules: true
-						}
-					}
-				]
-			}
+           	 	test: /\.scss$/,
+            	use: [
+                	"style-loader", // creates style nodes from JS strings
+                	"css-loader", // translates CSS into CommonJS
+                	"sass-loader" // compiles Sass to CSS
+            	]
+        	}
 		]
 	},
 	plugins: [
@@ -33,5 +30,5 @@ module.exports = {
 			filename: "index.html",
 			inject: "body"
 		}),
-	]
+	],
 };
