@@ -1,7 +1,108 @@
-@mixin color() {
-	color: red;
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+	box-sizing: border-box;
 }
 
-h2 {
-	@include color();
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.search {
+	height: 23vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	h2 {
+		font-size: 40px;
+	}
+	button, input {
+		margin: 0 1vw;
+		font-size: 20px;
+	}
+	button {
+		padding: 1vh 1vw;
+		background-color: #9b8e5a;
+		color: #fff;
+		cursor: pointer;
+		border: none;
+		border-radius: 5px;
+		&:hover {
+			opacity: 0.8;
+		}	
+	}
+	input {
+		padding: 0.6vh 0.5vw;
+	}
+}
+
+.results {
+	min-height: 70vh;
+	width: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	margin: 0 auto;
+	font-weight: bold;
+}
+
+.response {
+	margin: 70px;
+}
+
+.title-country{
+	padding: 20px;
+	color: #160bb7;
+	font-size: 50px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.title-info {
+	min-width: 700px;
+	max-width: 900px;
+	padding: 4px;
+	background-color: blue;
+	color: #fff;
+	font-size: 25px;
+	text-align: left;
+}
+
+.info {
+	display: flex;
+	ul {
+		margin: 0;
+		padding: 10px;
+		font-size: 25px;
+		text-align: left;
+		list-style-type: none;
+		li {
+			padding: 10px;
+		}	
+	}
+}
+
+.list-title {
+	min-width: 200px;
+	background-color: #ffaa00;
+}
+
+.list-value {
+	min-width: 500px;
+	background-color: #ffe500;
+	color: #160bb7;
+}
+
+footer {
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	color: #fff;
+	font-size: 20px;
 }

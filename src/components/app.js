@@ -1,13 +1,20 @@
 import React from 'react';
 
 class App extends React.Component {
-	render() {
-		return (
-			<div>
-				<h2>Test #1</h2>
-			</div>
-		);
+  constructor() {
+		super();
+		this.state = {
+			country: []
+		};
 	}
-}
+  componentDidMount() {
+    $.get('https://restcountries.eu/rest/v1/').success(function(response) {
+      this.setState({ country: response })
+    }.bind(this));
+  }
+  render() {
+    return <div>{JSON.stringify(this.state.country)}</div>
+  }
+};
 
 export default App;
