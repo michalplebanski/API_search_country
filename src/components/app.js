@@ -37,15 +37,14 @@ class App extends React.Component {
 					</form>
 				</section>
 				<section class="results">
-					<div class="country-info">
 						{this.state.country.map(item => (
-							<div class="response">
-								<h2 class="title-country">{item.name}</h2>
-								<div class="title-info">
-									Background Information:
+							<div class="results__response">
+								<h2 class="results__response--title-country">{item.name}</h2>
+								<div class="results__response--title-info">
+									Backgrund Information:
 								</div>
-								<div class="info">
-									<ul class="list-title">
+								<div class="results__info">
+									<ul class="results__info--list-title">
 										<li>Region</li>
 										<li>Alt spelling</li>
 										<li>Capital</li>
@@ -54,7 +53,7 @@ class App extends React.Component {
 										<li>Language(s)</li>
 										<li>Currency</li>
 									</ul>
-									<ul class="list-value">
+									<ul class="results__info--list-value">
 										<li>{item.region}</li>
 										<li>{item.altSpellings[1]}</li>
 										<li>{item.capital}</li>
@@ -66,7 +65,6 @@ class App extends React.Component {
 								</div>
 							</div>
 						))}
-					</div>
 				</section>
 				<footer>
 					<p>Michał Plebański</p>
