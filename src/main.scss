@@ -10,31 +10,19 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-.search {
+form {
 	height: 23vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
+
 	h2 {
 		font-size: 40px;
 	}
-	button, input {
-		margin: 0 1vw;
-		font-size: 20px;
-	}
-	button {
-		padding: 1vh 1vw;
-		background-color: #9b8e5a;
-		color: #fff;
-		cursor: pointer;
-		border: none;
-		border-radius: 5px;
-		&:hover {
-			opacity: 0.8;
-		}	
-	}
 	input {
 		padding: 0.6vh 0.5vw;
+		font-size: 20px;
 	}
 }
 
@@ -54,7 +42,7 @@ body {
 	margin: 70px;
 }
 
-.title-country{
+.title-country {
 	padding: 20px;
 	color: #160bb7;
 	font-size: 50px;
@@ -63,8 +51,7 @@ body {
 }
 
 .title-info {
-	min-width: 700px;
-	max-width: 900px;
+	min-width: 60vw;
 	padding: 4px;
 	background-color: blue;
 	color: #fff;
@@ -87,12 +74,12 @@ body {
 }
 
 .list-title {
-	min-width: 200px;
+	min-width: 20vw;
 	background-color: #ffaa00;
 }
 
 .list-value {
-	min-width: 500px;
+	min-width: 40vw;
 	background-color: #ffe500;
 	color: #160bb7;
 }
